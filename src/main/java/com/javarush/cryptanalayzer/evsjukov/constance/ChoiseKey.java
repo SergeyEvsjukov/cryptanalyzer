@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class ChoiseKey {
     private static int key;
-
     public ChoiseKey() {
         Random r = new Random();
         key = r.nextInt(CryptoAlphabet.keyLimits);
@@ -13,11 +12,13 @@ public class ChoiseKey {
         }
        this.key = key;
     }
-
     public static int getKey() {
         return key;
     }
     public void setKey (int key) {
+        this.key = key;
+    }
+    public ChoiseKey (int key) {
         this.key = key;
     }
 }
